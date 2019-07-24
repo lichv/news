@@ -1,0 +1,31 @@
+<wxs src="../../filter/timeUtils.wxs" module="utils" />
+<view class="news-index container has-bottom">
+	<view class="news-channels">
+		<scroll-view class="scroll-view_H" scroll-x >
+			<view wx:for="{{channels}}" wx:for-index="index" wx:for-item="channel" wx:key="index" class="channel-item {{channel.selected?'active':''}}" bindtap="selectChannel" data-code="{{channel.code}}">
+				{{channel.name}}
+			</view>
+		</scroll-view>
+	</view>
+	<swiper indicator-dots="true" autoplay="true" interval="5000" duration="1000" circular="true">
+		<block wx:for="{{banners}}" wx:key="{{key}}" wx:for-index="index" wx:for-item="item">
+			<swiper-item>
+
+				<image src="{{item.image}}" class="slide-image" width="355" height="150"/>
+			</swiper-item>
+		</block>
+	</swiper>
+	<view class="news-list">
+		<navigator wx:for="{{list}}" wx:for-index="index" wx:for-item="news" wx:key="news.code" class="news-item"  url="../detail/index?code={{news.code}}">
+			<image class="news-img" src="{{news.image}}" mode="aspectFill"></image>
+			<view class="news-text">
+				<view class="news-title">{{news.title}}</view>
+				<view class="news-info">
+					<label class="news-date">{{utils.formaTime(news.postdate)}}</label>
+					<label wx:if="{{news.commentcount}}" class="news-comment">{{news.commentcount}}评</label>
+				</view>
+			</view>
+		</navigator>
+	</view>
+</view>
+<tabbar></tabbar>

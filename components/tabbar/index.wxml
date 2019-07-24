@@ -1,0 +1,8 @@
+<view class="footerBar">
+	<block wx:for="{{tabbarList}}" wx:key="{{item}}">
+		<view class="fb_inner {{item.active?'active':''}}" bindtap="fbTapFn" data-item='{{item}}'>
+			<text class="iconfont fb_icon {{item.active?item.icon+'-fill':item.icon}} "></text>
+			<text class="fb_txt">{{item.txt}}</text>
+		</view>
+	</block>
+</view>

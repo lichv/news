@@ -1,0 +1,4 @@
+<view class="container">
+	<rich-text class="show-content" nodes="{{html}}"></rich-text>
+</view>
+<tabbar></tabbar>

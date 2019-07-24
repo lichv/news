@@ -1,0 +1,14 @@
+<view class="avatar">
+	<button wx:if="{{userInfo === null}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">微信登录</button>
+	<view wx:else>
+		<image src="{{userInfo.avatarUrl}}"></image>
+		<view class="profile-nickname">{{userInfo.nickName}}</view>
+	</view>
+</view>
+<view class="cells">
+	<navigator class="item">个人资料</navigator>
+	<view class="divider"></view>
+	<navigator class="item" url='../agreement/index'>使用条款</navigator>
+	<navigator class="item" url='../policy/index'>隐私政策</navigator>
+</view>
+<tabbar></tabbar>

@@ -1,0 +1,8 @@
+<view class="container">
+	<view class="header">
+		<view class="news-title">{{news.title}}</view>
+		<view class="auth-info">{{news.newssource}}({{news.newsauthor}})</view>
+	</view>
+	<rich-text class="news-content" nodes="{{news.content}}"></rich-text>
+	<cover-image wx:if='{{news.cover}}' class="img" src="{{news.cover}}" />
+</view>

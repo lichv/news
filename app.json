@@ -1,0 +1,17 @@
+{
+	"pages": [
+		"pages/news/index",
+		"pages/profile/index",
+		"pages/policy/index",
+		"pages/agreement/index"
+	],
+	"window": {
+		"backgroundTextStyle": "light",
+		"backgroundColor": "#d22222",
+		"backgroundColorTop": "#d22222",
+		"navigationBarBackgroundColor": "#d22222",
+		"navigationBarTitleText": "WeChat"
+	},
+	
+	"sitemapLocation": "sitemap.json"
+}

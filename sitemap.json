@@ -1,0 +1,7 @@
+{
+	"desc": "仿头条",
+	"rules": [{
+		"action": "allow",
+		"page": "*"
+	}]
+}
